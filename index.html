@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Eye Care Clinic</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <script>
+            function openNav() {
+                document.getElementById("sideNavbar").style.width = "250px";
+                document.getElementById("closeSideNav").style.zIndex = "10000";
+            };
+
+            function closeNav() {
+                document.getElementById("sideNavbar").style.width = "0";
+            };
+
+            $(window).on('resize', function() {
+                if(document.getElementById("sideNavbar")) {
+                    if($(window).width() < 768)
+                        document.getElementById("sideNavbar").style.width = "0";
+                    else
+                        document.getElementById("sideNavbar").removeAttribute('style');
+                }
+            });
+        </script>
+        <header class="col-xs-12 no_gutter">
+            <div class="col-xs-12 col-sm-5 col-md-6">
+                <b>LOGO HERE</b>
+            </div>
+            <div class="col-xs-12 col-sm-7 col-md-6">
+                <div class="col-xs-12">
+                    <div class="col-xs-4 col-md-3 col-md-offset-1 head_icons text_wrapping text-center title="My Account">
+                        <img src="./images/icon1.png" alt="My Account">
+                        <a class="capitalize" href="#">my account</a>
+                    </div>
+                    <div class="col-xs-4 col-md-3 head_icons text_wrapping text-center" title="Chat Now">
+                        <img src="./images/icon2.png" alt="Chat Now">
+                        <a class="capitalize" href="#">chat now</a>
+                    </div>
+                    <div class="col-xs-4 col-md-3 head_icons text_wrapping text-center" title="100.388.1000">
+                        <img src="./images/icon3.png" alt="100.388.1000">
+                        <a href="#">100.388.1000</a>
+                    </div>
+                </div>
+                <div class="col-xs-12 text-center">
+                    <button class="btn head_button capitalize">order now</button>
+                    <button class="btn head_button capitalize">contact us</button>
+                </div>
+            </div>
+            <div class="col-xs-12 no_gutter">
+                <nav id="sideNavbar" class="nav_border sidenav">
+                    <ul class="nav navbar-nav" style="width: 100%;">
+                        <li id="closeSideNav" class="col-xs-1 visible-xs"><a class="pull-right" onclick="closeNav()"><span class="glyphicon glyphicon glyphicon-remove"></a></li>
+                        <li><a class="text-center capitalize" href="#">home<span class="pull-right hidden-xs">/</span></a></li>
+                        <li><a class="text-center capitalize" href="#">how it works<span class="pull-right hidden-xs">/</span></a></li>
+                        <li><a class="text-center capitalize" href="#">our products<span class="pull-right hidden-xs">/</span></a></li>
+                        <li><a class="text-center capitalize" href="#">doctors<span class="pull-right hidden-xs">/</span></a></li>
+                        <li><a class="text-center capitalize" href="#">about us<span class="pull-right hidden-xs">/</span></a></li>
+                        <li><a class="text-center capitalize" href="#">contact us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div id="mainBody" class="col-xs-12 no_gutter">
+            <section id="firstSection" class="col-xs-12">
+                <div class="col-xs-12">
+                    <div class="col-xs-10 col-sm-7 col-md-6 banner_content">
+                        <div class="col-xs-12 no_gutter">
+                            <h1 class="capitalize banner_title">for your eyes only</h1>
+                            <p>
+                                <small>
+                                    Contact lenses are personal. For 30 years, this understanding has been the driving force
+                                    behind. We've never lost sight of that personal touch, and our eyes remain focused on
+                                    ensuring that each client sees, feels and looks their very best.
+                                </small>
+                            </p>
+                            <p class="banner_btn_margin">
+                                <button class="btn head_button capitalize text_wrapping" title="See For Yourself" style="margin: 0;">see for yourself</button>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="col-xs-12 floater_opt">
+                <div class="col-xs-12 banner_opt">
+                    <div class="col-xs-12 col-sm-3 text-center banner_opt_align banner_opt_border">
+                        <img class="" src="./images/icon4.png" alt="">
+                        <p class="capitalize">place your order</p>
+                    </div>
+                    <div class="col-xs-12 col-sm-3 text-center banner_opt_align banner_opt_border">
+                        <img class="" src="./images/icon5.png" alt="">
+                        <p class="capitalize">our doctor affiliates</p>
+                    </div>
+                    <div class="col-xs-12 col-sm-3 text-center banner_opt_align banner_opt_border">
+                        <img class="" src="./images/icon6.png" alt="">
+                        <p class="capitalize">account login</p>
+                    </div>
+                    <div class="col-xs-12 col-sm-3 text-center banner_opt_align">
+                        <img class="" src="./images/icon7.png" alt="">
+                        <p class="capitalize">easy chat</p>
+                    </div>
+                </div>
+            </div>
+            <button id="sideNavBtn" class="visible-xs sidenavbtn" onclick="openNav()"><span class="glyphicon glyphicon-chevron-right"></span></button>
+        </div>
+        <footer class="col-xs-12 no_gutter">
+
+        </footer>
+    </body>
+</html>

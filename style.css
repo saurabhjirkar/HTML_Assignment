@@ -1,0 +1,226 @@
+/* Body styling */
+@font-face {
+    font-family: 'TempFontFamily';
+    src: url('./fonts/Operetta12-Medium.eot') format('embedded-opentype'),
+        url('./fonts/Operetta12-Medium.woff') format('woff'),
+        url('./fonts/Operetta12-Medium.otf') format('otf'),
+        url('./fonts/Operetta12-Medium.ttf')  format('truetype'),
+        url('./fonts/Operetta12-Medium.svg') format('svg');
+}
+body {
+    font-family: 'MyFontFamily', sans-serif;
+    position: relative;
+}
+.text_wrapping {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.capitalize {
+    text-transform: capitalize;
+}
+.no_gutter {
+    padding-left: 0;
+    padding-right: 0;
+}
+a:focus, a:hover, a:active {
+    outline: none;
+    background-color: transparent !important;
+}
+
+/* Header styling */
+header > :first-child {
+    color: #3887ee;
+    padding: 30px 60px;
+    font-size: 30px;
+}
+.head_icons {
+    padding: 15px 0;
+}
+.head_button {
+    background-color: #30b2e4;
+    width: 35%;
+    border: none;
+    margin: 0 5px;
+    border-radius: 20px;
+    padding: 10px;
+    color: white;
+}
+.head_button:hover, .head_button:focus, .head_button:active {
+    background-color: #28829c;
+    color: white;
+    outline: none !important;
+}
+.nav_border {
+    border-top: 1px solid #30b2e4;
+    border-bottom: 1px solid #30b2e4;
+    margin-top: 20px;
+    height: 50px;
+}
+.navbar-nav > li {
+    width: 16.666666667%;
+}
+.nav > li > a {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* middle body */
+#firstSection {
+    background-image: url('./images/banner.jpg');
+    height: auto;
+    background-repeat: no-repeat;
+    background-position: 0% 0%;
+    background-size: 100% 100%;
+}
+.banner_content {
+    padding: 110px 60px;
+}
+.banner_content > h1 {
+    color: #30b2e4;
+}
+.banner_btn_margin {
+    margin: 30px 0;
+}
+.banner_title {
+    color: #30b2e4;
+}
+.banner_opt {
+    background-color: #30b2e4;
+    color: white;
+    padding: 30px 30px 20px;
+    border-radius: 25px;
+    box-shadow: 1px 3px 5px #afaeae;
+}
+.banner_opt_border {
+    border-right: 1px solid white;
+}
+.banner_opt_align {
+    height: 110px;
+    padding: 20px 15px;
+    position: relative;
+}
+.banner_opt_align > img {
+    height: auto;
+    width: 40px;
+}
+.banner_opt_align > p {
+    position: absolute;
+    bottom: 0;
+    width: 90%;
+    margin: 10px auto;
+}
+.floater_opt {
+    padding: 40px;
+    position: absolute;
+    top: 390px;
+}
+.hr_width {
+    width: 20%;
+    background-color: #e8ec7a;
+    height: 3px;
+    margin: 0 auto 10px 0;
+}
+
+/* Media queries */
+@media screen and (min-width: 992px) and (max-width: 1024px) {
+    header > :first-child {
+        padding: 20px 50px;
+    }
+    .head_icons > img {
+        height: 30px;
+    }
+    .head_icons > a {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    header > :first-child {
+        padding: 10px 50px;
+    }
+    .head_icons {
+        padding: 15px 0;
+    }
+    .head_button {
+        width: 45%;
+    }
+    .head_icons > img {
+        height: 25px;
+    }
+    .head_icons > a {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    header > :first-child {
+        padding: 0;
+        text-align: center;
+    }
+    .head_button {
+        width: 45%;
+    }
+    .head_icons {
+        padding: 15px 0;
+    }
+    .head_icons > img {
+        height: 20px;
+    }
+    .head_icons > a {
+        font-size: 12px;
+    }
+    .nav_border {
+        border: none;
+        margin: 0;
+    }
+    .navbar-nav {
+        margin: 0;
+        padding: 20px;
+    }
+    .navbar-nav > li {
+        width: 100%;
+    }
+    .navbar-nav > li > a {
+        color: white;
+    }
+    .navbar-nav > li > a:hover, .navbar-nav > li > a:focus {
+        color: #90cef7;
+    }
+    .nav_btn {
+        background-color: #30b2e4;
+        border-radius: 15px;
+    }
+    .sidenavbtn {
+        position: fixed;
+        left: 10px;
+        bottom: 10px;
+        border-radius: 20px;
+        color: white;
+        border: none;
+        background-color: #30b2e4;
+        padding: 10px;
+        box-shadow: 0px 2px 3px #adaaaa;
+    }
+    .sidenav {
+        position: fixed;
+        z-index: 10000;
+        background-color: #30b2e4;
+        height: 100%;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        transition: 0.5s ease;
+        top: 0;
+        left: 0;
+    }
+    .banner_content {
+        padding: 30px 20px;
+    }
+    .banner_opt_border {
+        border-bottom: 1px solid white;
+        border-right: 0;
+    }
+    .floater_opt {
+        top: 80%;
+    }
+}
